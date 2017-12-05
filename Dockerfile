@@ -1,12 +1,12 @@
 FROM debian:jessie
 MAINTAINER Jean-Christophe Sirot <jcsirot@chelonix.com>
 
-RUN apt-get update -qq && apt-get install -yqq curl
+RUN apt-get update -qq && apt-get install -yqq curl wget
 
 # Install java
-RUN curl -s -k -L -C - -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u60-b27/server-jre-8u60-linux-x64.tar.gz | tar xfz - -C /
+RUN wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz | tar xfz - -C /
 
-ENV JAVA_HOME /jdk1.8.0_60
+ENV JAVA_HOME /jdk1.8.151_b12
 ENV PATH $PATH:$JAVA_HOME/bin
 
 # Install maven
