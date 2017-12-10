@@ -108,7 +108,7 @@ under the License.
       <password>7213</password>
       <host>proxy1</host>
       <port>8080</port>
-      <nonProxyHosts>localhost,127.0.0.1,.mousquetaires.com</nonProxyHosts>
+      <nonProxyHosts>localhost,127.0.0.1</nonProxyHosts>
     </proxy>
 
   </proxies>
