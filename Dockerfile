@@ -18,7 +18,7 @@ ENV PATH $PATH:$MAVEN_HOME/bin
 WORKDIR /home/atmo
 
 ADD . /home/atmo
-ADD ./settings.xml /root/.m2
+ADD ./settings.xml /root/.m2/settings.xml
 RUN mvn package -DskipTests
 
 EXPOSE 8080
