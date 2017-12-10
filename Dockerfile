@@ -14,10 +14,11 @@ RUN curl -s http://apache.mirrors.ovh.net/ftp.apache.org/dist/maven/maven-3/3.5.
 
 ENV MAVEN_HOME /apache-maven-3.5.2
 ENV PATH $PATH:$MAVEN_HOME/bin
-RUN mkdir /root/.m2 && mv /home/atmo/settings.xml /root/.m2
+
 WORKDIR /home/atmo
 
 ADD . /home/atmo
+ADD ./settings.xml /root/.m2
 RUN mvn package -DskipTests
 
 EXPOSE 8080
