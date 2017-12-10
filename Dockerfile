@@ -21,5 +21,5 @@ ADD . /home/atmo
 ADD ./settings.xml /root/.m2/settings.xml
 RUN mvn package -DskipTests
 
-EXPOSE 8080
+EXPOSE 8181
 ENTRYPOINT ["java", "-DPROD_MODE=true", "-Xmx1G", "-jar", "target/atmo-calc.jar"]
