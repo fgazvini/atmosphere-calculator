@@ -25,7 +25,7 @@ import org.junit.runner.*;
 public class APIIntegrationTest
 {
     @Rule
-    public Destination destination = new Destination(this, "http://localhost:8181/");
+    public Destination destination = new Destination(this, "http://127.0.0.1:8181/");
 
     @Context
     private Response response;
