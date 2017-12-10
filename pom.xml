@@ -6,13 +6,6 @@
   <artifactId>atmosphere-calc</artifactId>
   <version>0.2-SNAPSHOT</version>
 
-  <scm>
-    <url>https://github.com/jcsirot/atmosphere-calculator</url>
-    <connection>scm:git:git://github.com/jcsirot/atmosphere-calculator.git</connection>
-    <developerConnection>scm:git:git@github.com:jcsirot/atmosphere-calculator.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
-
   <dependencies>
     <dependency>
       <groupId>net.code-story</groupId>
